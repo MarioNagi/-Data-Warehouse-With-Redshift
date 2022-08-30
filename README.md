@@ -1,1 +1,1 @@
-# -Data-Warehouse-With-Redshift
+# Data-Warehouse-With-Redshift
