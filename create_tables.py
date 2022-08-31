@@ -4,12 +4,26 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """
+    Drops the tables if created using the queries in `drop_table_queries` list.
+    
+      Args:
+        cur: the cursor object.
+         conn = connection to Redshift DB.
+    """
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    """
+    Creates the tables using the queries in `drop_table_queries` list.
+    
+      Args:
+        cur: the cursor object.
+         conn = connection to Redshift DB.
+    """
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
